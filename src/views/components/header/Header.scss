@@ -1,0 +1,81 @@
+@import "../../styles/colors.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $main_color;
+  height: 80px;
+
+  &_logo {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 0 14px;
+  }
+
+  &_nav {
+
+    &_list {
+      position: relative;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      color: $light_gray;
+
+      &_item {
+        font-size: 1.8rem;
+        cursor: pointer;
+        margin-right: 5rem;
+
+        &:hover {
+          color: #fff;
+          transition: all 0.3s;
+        }
+
+        &_cta {
+          position: relative;
+          background-color: $main_color_dark;
+          border-radius: 150px;
+          width: 20rem;
+          height: 5rem;
+          overflow: hidden;
+          z-index: 3;
+
+          &:hover {
+            background-color: $main_color_light;
+            color: $main_color_dark;
+            transition: .3s;
+            transform: scale(1.05);
+            box-shadow: 0 0.5rem .5rem $main_color_dark;
+          }
+
+          & > * {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+          }
+
+          &_visible {
+            padding: 1.4rem 6rem;
+          }
+
+          &_invisible {
+            padding: 1.4rem 0rem;
+            position: absolute;
+            top: -100%;
+            left: 5rem;
+          }
+
+          &:hover &_invisible {
+            top: 0;
+          }
+
+          &:hover &_visible {
+            transform: translateY(100%);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../../styles/mixins.scss';
+
+.login {
+
+  &__button {
+    @include clear-button;
+    font-size: 1.8rem;
+    padding: 1.4rem 6rem;
+
+    &-cta {
+      @include button-cta;
+    }
+  }
+}

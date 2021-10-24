@@ -1,0 +1,25 @@
+@import "./colors.scss";
+
+@mixin clear-button {
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin button-cta {
+  font-size: 1.8rem;
+  padding: 1.4rem 6rem;
+  background-color: $main_color_dark;
+  border-radius: 150px;
+  color: $light_gray;
+
+  &:hover {
+    background-color: $main_color_light;
+    color: $main_color_dark;
+    transition: 0.3s;
+    box-shadow: 0 0.5rem 0.5rem $main_color_dark;
+  }
+}
